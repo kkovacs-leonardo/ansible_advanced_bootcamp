@@ -18,7 +18,7 @@ support1 ansible_host=support2."{{ GUID }}".internal
 support2 ansible_host=support1."{{ GUID }}".internal
 
 [windows] # Windows (Active Directory) server
-ad1 ansible_host=ad1."{{ GUID }}".internal
+ad1 ansible_host=ad1.9039.internal
 
 [windows:vars]
 ansible_user=Administrator
@@ -26,7 +26,6 @@ ansible_password=jVMijRwLbI02gFCo2xkjlZ9lxEA7bm7zgg==
 ansible_connection=psrp
 ansible_psrp_auth=basic
 ansible_psrp_cert_validation=ignore
-ansible_psrp_proxy=socks5h://localhost:2222
 ansible_become=false
 
 [internal:children]
